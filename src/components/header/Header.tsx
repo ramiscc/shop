@@ -3,10 +3,7 @@ import {icons} from "../../assets/icons";
 import "./header.scss";
 import {NavLink, Link} from "react-router-dom";
 
-interface IHeaderProps{
-
-}
-
+interface IHeaderProps{}
 
 const Header: FC<IHeaderProps> = () => {
     return (
@@ -26,17 +23,17 @@ const Header: FC<IHeaderProps> = () => {
             </div>
             <div className={"header__blocks"}>
                 <NavLink to={"/favorites"} className={"header__blocks-item"}>
-                    <img src={icons.like} alt="like"/>
+                    <i className="bi bi-heart"></i>
                     <p>Избранное</p>
                 </NavLink>
-                <div className={"header__blocks-item"}>
-                    <img src={icons.packageIcon} alt="package"/>
+                <NavLink to={"/orders"} className={"header__blocks-item"}>
+                    <i className="bi bi-box-seam"></i>
                     <p>Заказы</p>
-                </div>
-                <div className={"header__blocks-item"}>
-                    <img src={icons.shoppingCart} alt="cart"/>
+                </NavLink>
+                <NavLink to={"cart"} className={"header__blocks-item"}>
+                    <i className="bi bi-cart2"></i>
                     <p>Корзина</p>
-                </div>
+                </NavLink>
             </div>
             <div className={"header__user"}>
                 <img src={icons.user} alt="user"/>
