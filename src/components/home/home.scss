@@ -1,0 +1,13 @@
+.home{
+  &__titles{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 150%;
+    color: #414141;
+    padding: 50px 0;
+  }
+  &__image{
+    width: 100%;
+  }
+}
