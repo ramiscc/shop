@@ -8,20 +8,20 @@ interface IHeaderProps{}
 const Header: FC<IHeaderProps> = () => {
     return (
         <div className={"header container"}>
-            <Link to={"/"} className={"header__logo"}>
-                <img className={"header__logo-img"} src={icons.logo} alt="logo"/>
+            <Link to={"/"} className={"header__logo header__item"}>
+                <img className={"header__logo-image"} src={icons.logo} alt="logo"/>
             </Link>
-            <div className={"header__search"}>
+            <div className={"header__search header__item"}>
                 <Link to={"/catalog"} className={"header__btn btn"}>
                     <img src={icons.burgerMenu} alt=""/>
                     Каталог
                 </Link>
                 <div className={"header__search-input"}>
                     <input type="text" placeholder={"Найти товар"}/>
-                    <img src={icons.search} alt="search"/>
+                    <i className="bi bi-search"></i>
                 </div>
             </div>
-            <div className={"header__blocks"}>
+            <div className={"header__blocks header__item"}>
                 <NavLink to={"/favorites"} className={"header__blocks-item"}>
                     <i className="bi bi-heart"></i>
                     <p>Избранное</p>
@@ -35,12 +35,8 @@ const Header: FC<IHeaderProps> = () => {
                     <p>Корзина</p>
                 </NavLink>
             </div>
-            <div className={"header__user"}>
-                <img src={icons.user} alt="user"/>
-                <button className={"btn"}>Войти</button>
-                {/*<img className={"header__user-image"} src={icons.avatar} alt="user"/>*/}
-                {/*<p>Алексей</p>*/}
-                {/*<img src={icons.down} alt="open"/>*/}
+            <div className={"header__user header__item"}>
+                <i className="bi bi-person"></i>
             </div>
         </div>
     );

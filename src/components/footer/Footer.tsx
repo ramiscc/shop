@@ -24,10 +24,8 @@ const Footer: FC<IFooter> = () => {
                     <img src={icons.vkontakte} alt="vkontakte"/>
                     <img src={icons.facebook} alt="facebook"/>
                     <img src={icons.ok} alt="ok"/>
-                </div>
-                <div className={"footer__icons-phone"}>
-                    <img src={icons.phone} alt="phone"/>
-                    <p>8 800 777 33 33</p>
+                    <i className="bi bi-telephone"></i>
+                    <p>+8 800 777 33 33</p>
                 </div>
             </div>
         </div>

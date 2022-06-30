@@ -25,6 +25,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      column-gap: 20px;
+      i{
+        font-size: 20px;
+      }
     }
     &-phone{
       display: flex;
