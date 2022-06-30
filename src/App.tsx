@@ -9,9 +9,7 @@ import Vacancies from "./components/vacancies/Vacancies";
 import Catalog from "./components/catalog/Catalog";
 import Favorites from "./components/favorites/Favorites";
 
-interface IAppProps {
-
-}
+interface IAppProps {}
 
 const App: FC<IAppProps> = () => {
     return (
