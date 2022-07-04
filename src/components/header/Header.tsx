@@ -2,10 +2,14 @@ import {FC} from "react";
 import {icons} from "../../assets/icons";
 import "./header.scss";
 import {NavLink, Link} from "react-router-dom";
+import {useDispatch} from "react-redux";
+import {changePopup} from "../../store/reducers/dataSlice";
 
 interface IHeaderProps{}
 
 const Header: FC<IHeaderProps> = () => {
+    const dispatch = useDispatch()
+
     return (
         <div className={"header container"}>
             <Link to={"/"} className={"header__logo header__item"}>
@@ -13,8 +17,8 @@ const Header: FC<IHeaderProps> = () => {
             </Link>
             <div className={"header__search header__item"}>
                 <Link to={"/catalog"} className={"header__btn btn"}>
-                    <img src={icons.burgerMenu} alt=""/>
-                    Каталог
+                    <i className="bi bi-list"></i>
+                    <p>Каталог</p>
                 </Link>
                 <div className={"header__search-input"}>
                     <input type="text" placeholder={"Найти товар"}/>
@@ -36,7 +40,7 @@ const Header: FC<IHeaderProps> = () => {
                 </NavLink>
             </div>
             <div className={"header__user header__item"}>
-                <i className="bi bi-person"></i>
+                <i onClick={() => dispatch(changePopup())} className="bi bi-person"></i>
             </div>
         </div>
     );
